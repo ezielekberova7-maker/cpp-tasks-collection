@@ -1,0 +1,182 @@
+#include <iostream>
+using namespace std;
+
+//task. 2eded daxil edin hansi boyukdurse onu ekrana cixarin.
+void muqayise() {
+	int a;
+	int b;
+	cout << " a daxil et" << endl;
+	cin >> a;
+	cout << " b daxil et" << endl;
+	cin >> b;
+
+	if (b < a) {
+		cout << a << " boyuk eded";
+	}
+	else if (b > a) {
+		cout << b << " boyuk eded";
+
+	}
+	else {
+		cout << (a = b);
+	}
+}
+
+//istifadeciden bir eded alin cut ve ya tek oldugun gosterin.
+void cuttek()
+{
+	int a;
+	cout << "eded daxil edin:";
+	cin >> a;
+	if (a % 2 == 0) {
+		cout << "cut";
+	}
+	else {
+		cout << "tek";
+	}
+}
+
+//while dovru ile istifadeciden 0 daxil edene qeder ededleri toplayn.
+void toplama() {
+	int a, s = 0;
+	cin >> a;
+	while (a != 0) {
+		s = s + a;
+
+		cin >> a;
+	};
+	cout << s;
+}
+
+// yalniz 3-e ve 7-e bolunen ededleri yazin 100-e qeder.
+void bolme() {
+	int a;
+	cout << "eded daxil et" << endl;
+	cin >> a;
+
+	for (int i = 1; i < a; i++)
+	{
+		if (i % 3 == 0 && i % 7 == 0) {
+			cout << i << " ; ";
+		}
+	}
+
+}
+
+//n sayda eded alin ve onlarin cemini tapin.
+void cemler() {
+	int n, s = 0;
+	cout << "nece eded daxil edeceksiniz?" << endl;
+	cin >> n;
+
+
+	for (int i = 0; i < n; i++)
+	{
+		int x;
+		cin >> x;
+		s = s + x;
+	}
+	cout << s << endl;
+}
+
+//istifadeciden 1 eded alin , 1-den hemin edede qeder olan butun cut ededlerin kvadratlari cemini tapin.
+void kvadrat() {
+	int a, k, s = 0;
+	cout << "eded daxil et" << endl;
+	cin >> a;
+
+	for (int i = 1; i <= a; i++)
+	{
+
+		if (i % 2 == 0) {
+			k = i * i;
+			s = s + k;
+		}
+		
+	}
+	cout << s;
+}
+
+//istifadeciden 1 eded alin ve faktorialini tapin.
+void faktorial() {
+	int f = 1, n;
+	cout << "eded daxil edin" << endl;
+	cin >> n;
+	for (int i = 1;i <= n;i++) {
+		f = f * i;
+	}
+	cout << f;
+}
+
+
+
+//ededin tersini tapin
+void ters() {
+	int n, t = 0;
+	cout << "eded daxil edin" << endl;
+	cin >> n;
+	while (n != 0) {
+		t = t * 10 + n % 10;
+		n = n / 10;
+	}
+	cout << t;
+}
+
+
+
+//sade olub olmamasini yoxlayan kod
+void sade() {
+	int n;
+	cout << "eded daxil edin" << endl;
+	cin >> n;
+	if (n < 2) {
+		cout << n << " sade eded deyil" << endl;
+	}
+	else {
+		int i;
+		for (i = 2;i * i <= n;i++) {
+			if (n % i == 0) {
+				break;
+			}
+
+		}
+		if (i * i > n) {
+			cout << n << " sade ededdir" << endl;
+		}
+		else {
+			cout << n << " sade eded deyil" << endl;
+		}
+	}
+}
+
+
+
+//fibonacci ededler arasinda 1000 den kicik olanlari cap edin.
+void fibonacci() {
+	int a = 0, b = 1;
+		while (a < 1000) {
+			cout << a << " ";
+			b = b + a;
+			a = b - a;
+		}
+	cout << endl;
+}
+
+
+
+
+int main() {
+	//fibonacci();
+	//sade();
+	//ters();
+	//faktorial();
+	//kvadrat();
+	//cemler();
+
+	//bolme();
+	//cuttek();
+	//toplama();
+	//muqayise();
+	return 0;
+
+}
